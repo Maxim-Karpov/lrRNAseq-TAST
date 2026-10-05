@@ -10,10 +10,16 @@ The **bioinformatic_functions.ipynb** is required to be imported in the main fil
 The rest of the files serve as example data to try out.
 
 # Requirements
-- Jupyter Notebook or Jupyter Lab
-- Python libraries: Pandas, Matplotlib, Numpy, Regex, Biopython, OS, ast, operator
-- seqtk installed via bioconda i.e. conda install bioconda::seqtk
-- BLAST, outputting in -outfmt '6 qseqid sseqid slen qlen qstart qend sstart send length mismatch gapopen pident evalue bitscore' format.
+- Python 3.9 or newer, with Jupyter Notebook or Jupyter Lab
+- Python libraries: Pandas, Matplotlib, Numpy, Biopython. Install them with `pip install -r requirements.txt`
+- BLAST, outputting in -outfmt '6 qseqid sseqid slen qlen qstart qend sstart send length mismatch gapopen pident evalue bitscore' format (no header line).
+
+# Main settings
+All settings are written in capital letters in the visualiser notebook. The most important ones are:
+- `STRAND_MODE` - which alignment strand(s) to keep for each transcript. `"dominant"` (default) keeps only the strand with the highest total bitscore, so sense and antisense hits are not merged into one gene model. `"both"` reproduces the behaviour of version 1.0.
+- `MAX_INTRON_LENGTH` and `MIN_COVERAGE` - transcript filters.
+- `BARCODE_LEN` - number of barcode bases trimmed from both ends of each transcript before ORF finding. ORF positions are automatically shifted back so they match the BLAST coordinates.
+- `MIN_GAP` - minimal genomic distance between transcripts that share a plot row.
 
 [Full documentation](Docs/overview.md)
 
