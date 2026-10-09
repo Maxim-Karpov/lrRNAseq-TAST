@@ -34,5 +34,5 @@ The numbering assumes transcripts are oriented 5'→3', as full-length (FLNC/CCS
 
 [Full documentation](Docs/overview.md)
 
-
-<br />
+# Command-line version
+lrRNAseq TAST is also available as a command-line tool, [lrRNAseq-TAST_cli](https://github.com/Maxim-Karpov/lrRNAseq-TAST_cli). It performs the same analysis and gives identical results, but runs in one command (`tast -t transcripts.fasta -g region.fasta -o results`), can run BLAST for you, saves the plot together with tables of the transcripts in each plot row, and installs with `pip`. It is convenient for routine runs and for analysing many genomic regions.
