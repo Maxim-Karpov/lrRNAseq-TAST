@@ -17,9 +17,9 @@
 
 - Labelling of largest ORF/coding sequence may not be most accurate in the flanking exons.
 - Optimal filtering protocol has not been determined yet. In case of finding difficult, highly variable, short exons, current filtering requires experimentation and understanding of biological sequences at hand as well as the software.
-- There is currently nothing implemented to indicate that the alignment happened in reverse orientation. Reverse alignments, in rare cases, can skew perception. Furthermore, the alignment region numbering system treats all types of alignments the same.
 - Currently, in your BLAST search you must specify your genomic sequence to be the subject (the database), however, this prevents multithreading in the BLAST command as there is only a single sequence in the database. The option to use your lrRNAseq as the database is in works.
 
 # Implemented
 
 - lrRNAseq-TAST 1.0.
+- lrRNAseq-TAST 1.1. Alignment regions are numbered by their position in the transcript and colinear blocks are coloured by direction (pink forward, blue reverse), so reverse-strand genes and rearrangements are visible. Plot rows are numbered and the plot can be saved with `PLOT_PATH`. Strand selection (`STRAND_MODE`), faster filtering and plot row layout. Gives the same results as the command-line version, [lrRNAseq-TAST_cli](https://github.com/Maxim-Karpov/lrRNAseq-TAST_cli).
